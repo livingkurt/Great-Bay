@@ -1,4 +1,5 @@
 var mysql = require("mysql");
+require("dotenv").config();
 
 var connection = mysql.createConnection({
     host: "localhost",
@@ -10,7 +11,7 @@ var connection = mysql.createConnection({
     user: "root",
 
     // Your password
-    password: "dbpassword",
+    password: process.env.DB_PASSWORD,
     database: "greatBay_db"
 });
 
