@@ -4,22 +4,26 @@ const connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    database: "great_bay_db",
+    database: "greatBay_db",
     password: process.env.DB_PASSWORD
 })
 
 connection.connect(function(err){
     console.log(connection.threadId);
+    post()
 })
 
-function createRock() {
-    console.log("Inserting a new product...\n");
+item_name = "Hello"
+item_price = 10.10
+starting_bid = 12.10
+
+function post() {
     connection.query(
-        "INSERT INTO songs SET ?",
+        "INSERT INTO items SET ?",
         {
-            title: "When the Levee Breaks",
-            artist: "Led Zeppelin",
-            genre: "rock"
+            itemName: `${item_name}`,
+            currentBid: `${item_price}`,
+            startingBid: `${starting_bid}`
         },
         function (err, res) {
             if (err) throw err;
@@ -31,7 +35,7 @@ function createRock() {
 };
 
 function afterConnection() {
-    connection.query("SELECT * FROM songs", function (err, res) {
+    connection.query("SELECT * FROM items", function (err, res) {
         if (err) throw err;
         console.log(res);
         connection.end();
