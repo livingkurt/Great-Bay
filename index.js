@@ -11,12 +11,14 @@ const inquirer = require("inquirer");
 inquirer
     .prompt([
         // Main Menu
-        type: "list",
-        name: "mainMenu",
-        message: "Welcome to the Great Bay. Please choose one of the options below."
-        choices: [
-            "List an item",
-            "Bid on an item",
-            "Exit"
-        ]
-    ])
+        {
+            type: "list",
+            name: "mainMenu",
+            message: "Welcome to the Great Bay. Please choose one of the options below.",
+            choices: [
+                "List an item",
+                "Bid on an item",
+                "Exit"
+            ]
+        }
+    ]).then(function () { });
