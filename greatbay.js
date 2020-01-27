@@ -7,6 +7,7 @@ const connection = mysql.createConnection({
     database: "great_bay_db",
     password: process.env.DB_PASSWORD
 })
+
 connection.connect(function(err){
     console.log(connection.threadId);
 })
