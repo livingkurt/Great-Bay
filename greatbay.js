@@ -11,7 +11,6 @@ connection.connect(function(err){
     console.log(connection.threadId);
 })
 
-
 function createRock() {
     console.log("Inserting a new product...\n");
     connection.query(
