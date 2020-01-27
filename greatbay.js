@@ -1,3 +1,21 @@
+// Reponsibilites
+
+// Modules
+    // Prompt - Function
+        // Inquirer
+            // POST
+                // Prompt for item - Function
+                // Name, Price, Starting Bid
+                    // INSERT INTO - Function
+                    // Start Over at    beginning
+            // BID
+                // Prompt for item - Function
+                    // Ask User What bid amount - function
+                        // Tell bid is high enough - function
+            // EXIT
+                // Prompt User to Exit
+
+
 require("dotenv").config();
 const mysql = require("mysql");
 const connection = mysql.createConnection({
@@ -7,6 +25,7 @@ const connection = mysql.createConnection({
     database: "great_bay_db",
     password: process.env.DB_PASSWORD
 })
+
 connection.connect(function(err){
     console.log(connection.threadId);
 })
