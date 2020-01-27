@@ -1,24 +1,16 @@
-var mysql = require("mysql");
-
-var connection = mysql.createConnection({
+require("dotenv").config();
+const mysql = require("mysql");
+const connection = mysql.createConnection({
     host: "localhost",
-
-    // Your port; if not 3306
     port: 3306,
-
-    // Your username
     user: "root",
+    database: "great_bay_db",
+    password: process.env.DB_PASSWORD
+})
+connection.connect(function(err){
+    console.log(connection.threadId);
+})
 
-    // Your password
-    password: "dbpassword",
-    database: "greatBay_db"
-});
-
-connection.connect(function (err) {
-    if (err) throw err;
-    console.log("connected as id " + connection.threadId);
-    createRock();
-});
 
 function createRock() {
     console.log("Inserting a new product...\n");
