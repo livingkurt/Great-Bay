@@ -1,5 +1,7 @@
 require("dotenv").config();
 const mysql = require("mysql");
+const inquirer = require("inquirer");
+
 const connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
@@ -7,7 +9,7 @@ const connection = mysql.createConnection({
     database: "great_bay_db",
     password: process.env.DB_PASSWORD
 })
-connection.connect(function(err){
+connection.connect(function (err) {
     console.log(connection.threadId);
 })
 

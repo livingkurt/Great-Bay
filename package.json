@@ -1,0 +1,33 @@
+{
+  "name": "great-bay",
+  "version": "1.0.0",
+  "description": "Great Bay off the Silk Road",
+  "main": "greatbay.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/livingkurt/Great-Bay.git"
+  },
+  "keywords": [
+    "coding",
+    "bootcamp",
+    "great",
+    "bay",
+    "mySQL",
+    "node",
+    "group",
+    "activity"
+  ],
+  "author": "Kurt LaVacque, Justin Wofford, Brianna McCray, Crystal Ly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/livingkurt/Great-Bay/issues"
+  },
+  "homepage": "https://github.com/livingkurt/Great-Bay#readme",
+  "dependencies": {
+    "inquirer": "^7.0.4",
+    "mysql": "^2.18.1"
+  }
+}
