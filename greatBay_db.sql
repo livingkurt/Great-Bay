@@ -6,34 +6,31 @@ USE greatBay_db;
 
 CREATE TABLE items
 (
-  id INT NOT NULL
-  AUTO_INCREMENT,
-  itemName VARCHAR
-  (45) NOT NULL,
-  currentBid DECIMAL
-  (10,2) NULL,
+  id INT NOT NULL AUTO_INCREMENT, 
+  itemName VARCHAR(45) NOT NULL,
+  startingBid INT NULL,
+  currentBid INT NULL,
 );
 
   INSERT INTO items
-    (title, artist, genre)
+    (itemName, startingBid, currentBid)
   VALUES
-    ("pop it for pimp", "PimpC", "rap");
+    ("2007 Honda Civic", "2500");
 
   INSERT INTO items
-    (title, artist, genre)
+    (itemName, startingBid, currentBid)
   VALUES
-    ("Stanglehold", "Ted Nugent", "rock");
+    ("2013 Hyandai Santa Fe", "7000");
 
   INSERT INTO items
-    (title, artist, genre)
+    (itemName, startingBid, currentBid)
   VALUES
-    ("Shake the Frost", "Tyler Childers", "country");
+    ("2006 Dodge Ram", "5000");
 
   INSERT INTO items
-    (title, artist, genre)
+    (itemName, startingBid, currentBid)
   VALUES
-    ("Money Grabber", "Fitz & the Tantrums", "alternative");
+    ("2020 Toyota Land Cruiser", "85000");
 
 
-  SELECT *
-  FROM items;
+  SELECT * FROM items;
